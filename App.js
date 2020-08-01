@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, View, Text, ImageBackground } from 'react-native';
+import {Button, View, Text} from 'react-native';
 import {NavigationContainer, DrawerActions} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {
@@ -69,11 +69,6 @@ const Drawer = createDrawerNavigator();
 function App() {
   return (
     <NavigationContainer>
-      {/* <MyDrawer /> */}
-      {/* <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Home" component={HomeScreen} />
-        <Drawer.Screen name="Notifications" component={NotificationsScreen} />
-      </Drawer.Navigator> */}
       <Stack.Navigator initialRouteName="ProductList">
         <Stack.Screen
           name="ProductList"
@@ -90,3 +85,13 @@ function App() {
   );
 }
 export default App;
+
+{
+  /* <MyDrawer /> */
+}
+{
+  /* <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Screen name="Home" component={HomeScreen} />
+        <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+      </Drawer.Navigator> */
+}

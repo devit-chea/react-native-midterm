@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   StyleSheet,
   View,
@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   ImageBackground,
 } from 'react-native';
-export default function ProductListScreen({navigation}) {
+export default function ProductListScreen({ navigation }) {
   const [productInfos] = useState([
     {
       id: '001',
@@ -35,19 +35,19 @@ export default function ProductListScreen({navigation}) {
     },
   ]);
 
-  const image = {uri: 'https://reactjs.org/logo-og.png'};
+  const image = { uri: 'https://reactjs.org/logo-og.png' };
 
   return (
-    <View style={{flex: 1, justifyContent: 'center'}}>
+    <View style={{ flex: 1, justifyContent: 'center' }}>
       <View style={styles.container}>
         <ImageBackground source={image} style={styles.image}>
           <Text style={styles.text}>Wellcome to Our Store</Text>
         </ImageBackground>
       </View>
       <FlatList
-        style={{padding: 1, backgroundColor: 'gray'}}
+        style={{ padding: 1, backgroundColor: 'gray' }}
         data={productInfos}
-        renderItem={({item}) => (
+        renderItem={({ item }) => (
           <TouchableOpacity
             onPress={() => navigation.navigate('ProductDetail', item)}>
             <Text
